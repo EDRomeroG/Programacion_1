@@ -76,6 +76,7 @@ public class Main
         return promedio;
     }
 
+    //metodo para ver el promedio de la nota 1
     public static float verPromedioNota1(float nota1, float nota2, float nota3 )
     {
         float def=0;
@@ -83,5 +84,61 @@ public class Main
 
         return def;
     }
+
+
+    //metodo para saber la nota mayor del curso
+    public static float calcularNotaMayorDelCurso()
+    {
+        float notaMayor=0;
+        //falta hacer
+        return notaMayor;
+    }
+
+    //Metodo para saber la nota menor del curso
+    public static float calcularNotaMenorCurso()
+    {
+        float notaMenor=0;
+        //falta hacer
+        return notaMenor;
+    }
+
+    //metodo para saber si un estudiante paso el curso
+    public static float aprobarCurso()
+    {
+        float notaMenor=0;
+        //falta hacer
+        return notaMenor;
+    }
+    //Metodo para saber cuantos ganaron el curso
+    public static float calcularCuantosPasan()
+    {
+        float notaMenor=0;
+        //falta hacer
+        return notaMenor;
+    }
+
+    //Metodo para saber cuantos perdieron el curso
+    public static float calcularCuantosPierden()
+    {
+        float notaMenor=0;
+        //falta hacer
+        return notaMenor;
+    }
+    //Metodo para saber las notas mayores o iguales a 4
+    public static float calcularNotaMayorA4()
+    {
+        float notaMenor=0;
+        //falta hacer
+        return notaMenor;
+    }
+    //Metodo para saber nota maxima
+    public static float calcularNotaMaxima(Estudiante nota1, Estudiante nota2, Estudiante nota3)
+    {
+        float notaMenor=0;
+        //falta hacer
+        return notaMenor;
+    }
+
+
 
 }
