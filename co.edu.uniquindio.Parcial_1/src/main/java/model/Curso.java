@@ -150,7 +150,7 @@ public class Curso
         System.out.println("***********");
         System.out.println("Estudiante 3: "+infromacionEstudiante3);
     }
-    public static double calcularDefinitiv
+    public static double calcularDefinitiva
     (Estudiante estudiante)
     {
 
