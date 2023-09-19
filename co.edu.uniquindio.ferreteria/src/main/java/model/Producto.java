@@ -1,6 +1,7 @@
 package model;
 
-public class Producto {
+public class Producto
+{
     private String cod;
     private String nombrePro;
     private int cant;
@@ -90,19 +91,45 @@ public class Producto {
     public void setPrecio(double precio) {
         this.precio = precio;
     }
-
-
-    //metodo para cambiar el precio de un producto
-    public void cambiarPrecio(double nuevoPrecio)
+    //Metodo para validar solo numeros en un string
+    public static boolean esString(String input)
     {
-        this.precio = nuevoPrecio;
+
+        return input.matches("[0-9]+");
     }
 
+   //Metodo para cambiar el precio de un producto
+    public void cambiarPrecio(double nuevoPrecio,Producto producto)
+    {
+        if (esString(producto.getCod()))
+        {
+            if (producto.getCod().equals("0001"))
+            {
+                producto1.setPrecio(nuevoPrecio);
+            }
+            else if (producto.getCod().equals("0002"))
+            {
+                producto2.setPrecio(nuevoPrecio);
+            }
+            else if (producto.getCod().equals("0003"))
+            {
+                producto3.setPrecio(nuevoPrecio);
+            }
+            else if (producto.getCod().equals("0004"))
+            {
+                producto4.setPrecio(nuevoPrecio);
+            }
+            else
+            {
+                System.out.println("Producto no valido");
+            }
+        }
+    }
+    //Metodo para inicializar los datos del producto
     public  Factura inicializarProductos()
     {
-
          producto1 = new Producto("0001", "puntilla", 12, 12000);
-         producto2 = new Producto("0002", "amarras", 12, 2000);
+         producto2 = new Producto("0002", "amarras", 12, 3500);
          producto3 = new Producto("0003","Martillo",1, 28200);
          producto4 = new Producto("0004","Metro",4,12000);
 
@@ -115,8 +142,4 @@ public class Producto {
         return factura;
 
     }
-
-
-
-
 }

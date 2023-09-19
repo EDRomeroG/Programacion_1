@@ -1,6 +1,7 @@
 package model;
 
-public class Cliente {
+public class Cliente
+{
     private String nombre;
     private String ced;
     private String tel;
@@ -44,6 +45,7 @@ public class Cliente {
         this.tel = tel;
     }
 
+    //Metodo para inicializar los datos del cliente
     public Factura iniciarCliente()
     {
         Factura factura= new Factura();
@@ -59,7 +61,5 @@ public class Cliente {
 
         return factura;
     }
-
-
 
 }

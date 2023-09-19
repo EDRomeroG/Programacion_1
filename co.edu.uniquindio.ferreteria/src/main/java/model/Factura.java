@@ -1,9 +1,10 @@
 package model;
 import java.util.Scanner;
 
-public class Factura {
+public class Factura
+{
     Scanner sc = new Scanner(System.in);
-    int opcion;
+    private int opcion;
 
     private double total;
     private int contarPro;
@@ -26,7 +27,8 @@ public class Factura {
 
     }
 
-    public Factura(double total, int contarPro) {
+    public Factura(double total, int contarPro)
+    {
         this.total = total;
         this.contarPro = contarPro;
     }
@@ -140,17 +142,20 @@ public class Factura {
         this.empleado4 = empleado4;
     }
 
+    //Metodo para agregar productos
     public void agregarProducto(Producto producto)
     {
         total += producto.getPrecio();
         contarPro++;
     }
+    // Método matches para verificar si lo que ingreso contiene solo numeros o no
     public static boolean esString(String input)
     {
-        // Utiliza el método matches para verificar si input contiene solo numeros
+
         return input.matches("[0-9]+");
     }
 
+    //Metodo para mostrar  factura
     public void mostrarFactura( String id )
     {
         if (esString(id)) {
@@ -190,6 +195,10 @@ public class Factura {
             {
                 System.out.println("Documento no válido o no está registrado");
             }
+        }
+        else
+        {
+            System.out.println("verificar si el codigo ingresado es valido o no esta registrado");
         }
 
 

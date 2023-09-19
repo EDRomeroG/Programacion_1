@@ -5,31 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0230c0e-0c4a-4cb2-866c-09bfec81f787" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ejercicio1/MainEjercicio1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ejercicio2/MainEjercicio2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Automovil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Curso.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Docente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Empleado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Estudiante.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../co.edu.uniquindio.TallerPractica/src/main/java/ejercicio1/MainEjercicio1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../co.edu.uniquindio.TallerPractica/src/main/java/ejercicio2/MainEjercicio2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../co.edu.uniquindio.TallerPractica/src/main/java/ejercicio3/MainEjercicio3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../co.edu.uniquindio.TallerPractica/src/main/java/model/Atraccion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../co.edu.uniquindio.TallerPractica/src/main/java/model/Curso.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../co.edu.uniquindio.TallerPractica/src/main/java/model/Docente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../co.edu.uniquindio.TallerPractica/src/main/java/model/Estudiante.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../co.edu.uniquindio.TallerPractica/src/main/java/model/Visitante.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ferreteria/src/main/java/co/edu/uniquindio/Parcial_1/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ferreteria/src/main/java/co/edu/uniquindio/Parcial_1/Empleado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ferreteria/src/main/java/co/edu/uniquindio/Parcial_1/Factura.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ferreteria/src/main/java/co/edu/uniquindio/Parcial_1/Ferreteria.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ferreteria/src/main/java/co/edu/uniquindio/Parcial_1/Productos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ferreteria/src/main/java/co/edu/uniquindio/Parcial_1/TipoEmpleado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,20 +30,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "dev-programacion1",
-    "last_opened_file_path": "C:/Users/Daniel/Documents/Programacion1/Programacion_1/co.edu.uniquindio.ferreteria",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev-programacion1&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Daniel/Documents/Programacion1/Programacion_1/Programacion_1/co.edu.uniquindio.Parcial_1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="MainEjercicio1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ejercicio1.MainEjercicio1" />
@@ -103,6 +79,8 @@
       <workItem from="1694732603872" duration="3517000" />
       <workItem from="1694837611950" duration="128000" />
       <workItem from="1694837758784" duration="27000" />
+      <workItem from="1694840807355" duration="7611000" />
+      <workItem from="1695047003917" duration="17000" />
     </task>
     <servers />
   </component>

@@ -61,6 +61,7 @@ public class Empleado
         this.tipoEmpleado = tipoEmpleado;
     }
 
+    //Metodo para inicializar los datos del empleado
     public Factura iniciarEmpleado() {
         Factura factura = new Factura();
          empleado1 = new Empleado("Robinson", "1023", "316455", TipoEmpleado.ADMINISTRADOR);
@@ -76,3 +77,4 @@ public class Empleado
         return factura;
     }
 }
+
