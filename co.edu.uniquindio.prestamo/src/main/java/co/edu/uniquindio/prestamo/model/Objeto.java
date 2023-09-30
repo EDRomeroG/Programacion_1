@@ -8,7 +8,8 @@ public class Objeto
 
 
 
-    public Objeto(String nombre, String codigo) {
+    public Objeto(String nombre, String codigo)
+    {
         this.nombre = nombre;
         this.codigo = codigo;
     }
@@ -43,7 +44,7 @@ public class Objeto
     @Override
     public String toString()
     {
-        return "Objeto{" +
+        return "Objeto: " +"\n"+
                 "nombre='" + nombre + '\'' +
                 '}';
     }
