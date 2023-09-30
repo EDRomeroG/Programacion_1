@@ -66,11 +66,10 @@ public class Cliente
     @Override
     public String toString()
     {
-        return "Cliente{" +
-                "nombre='" + nombre + '\'' +
-                ", apellido='" + apellido + '\'' +
-                ", cedula='" + cedula + '\'' +
-                ", edad=" + edad +
-                '}';
+        return "Cliente: " +"\n"+
+                "Nombre: " + nombre +"\n"+
+                "Apellido: " + apellido +"\n"+
+                "Cedula: " + cedula +"\n"+
+                "Edad: " + edad ;
     }
 }

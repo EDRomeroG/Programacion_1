@@ -140,6 +140,6 @@ public class Producto
         factura.setProducto4(producto4);
 
         return factura;
-
+   // en la clase fereeterisa
     }
 }
