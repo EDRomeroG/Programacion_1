@@ -45,7 +45,7 @@ public class Objeto
     public String toString()
     {
         return "Objeto: " +"\n"+
-                "nombre='" + nombre + '\'' +
-                '}';
+                "Nombre: " + nombre ;
     }
+
 }

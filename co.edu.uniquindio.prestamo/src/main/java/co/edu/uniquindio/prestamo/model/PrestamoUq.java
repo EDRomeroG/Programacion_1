@@ -1,5 +1,8 @@
 package co.edu.uniquindio.prestamo.model;
 
+import co.edu.uniquindio.prestamo.Main;
+import co.edu.uniquindio.prestamo.utilidades.Utilidad;
+
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +13,7 @@ public class PrestamoUq
 
     //creacion lista clientes
     List<Cliente>listaClientes = new ArrayList<>();
+    List<Empleado>listaEmpleados=new ArrayList<>();
     List<Objeto>listaObjetos = new ArrayList<>();
 
 
@@ -22,6 +26,14 @@ public class PrestamoUq
 
     public List<Cliente> getListaClientes() {
         return listaClientes;
+    }
+
+    public List<Empleado> getListaEmpleados() {
+        return listaEmpleados;
+    }
+
+    public void setListaEmpleados(List<Empleado> listaEmpleados) {
+        this.listaEmpleados = listaEmpleados;
     }
 
     public List<Objeto> getListaObjetos() {
@@ -80,26 +92,44 @@ public class PrestamoUq
     /**
      * Metodo para actualizar la edad de un cliente
      * @param cedula
-     * @param nuevaEdad
-     */
-   /* public void actualizarCliente(String cedula)
+         */
+    public void actualizarCliente(String cedula)
     {
-        //int totalLista = getListaClientes().size();
-        for(int i=0; i<getListaClientes().size();i++)
+        for (int i = 0; i < getListaClientes().size(); i++)
         {
             Cliente cliente = getListaClientes().get(i);
-            if(cliente.getCedula().equalsIgnoreCase(cedula))
-            {
-                String nombreNuevo = JOptionPane.showInputDialog("Ingrese el nombre a actualizar");
-                String apellidoNuevo = JOptionPane.showInputDialog("Ingrese el nombre a actualizar");
-                String cedulaNuevo = JOptionPane.showInputDialog("Ingrese el nombre a actualizar");
-                int edadNuevo = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el nombre a actualizar"));
-                cliente.setEdad(nuevaEdad);
-                break;
-            }
 
+            if (cliente.getCedula().equalsIgnoreCase(cedula))
+            {
+                String opcion = JOptionPane.showInputDialog(
+                        "Que dato desea actualizar?\n" +
+                                "1. Nombre\n" +
+                                "2. Cedula\n" +
+                                "3. Salir\n" +
+                                "Seleccione una opcion:");
+
+                switch (opcion)
+                {
+                    case "1":
+                        String nombreNuevo = JOptionPane.showInputDialog
+                                ("Ingrese el nuevo nombre:");
+                        cliente.setNombre(nombreNuevo);
+                        break;
+                    case "2":
+                        String cedulaNueva = JOptionPane.showInputDialog
+                                ("Ingrese la nueva cedula:");
+                        cliente.setCedula(cedulaNueva);
+                        break;
+                    case "3":
+                        return;
+                    default:
+                        JOptionPane.showMessageDialog
+                                (null, "Opción no válida");
+                        break;
+                }
+            }
         }
-    }*/
+    }
 
 
     /**
@@ -119,6 +149,95 @@ public class PrestamoUq
             }
         }
     }
+
+
+    /**
+     * Metodo para crear  un empleado
+     * @param nombre
+     * @param apellido
+     * @param cedula
+     * @param edad
+     * @return
+     */
+    public boolean crearEmpleado(String nombre,
+                              String apellido,
+                              String cedula,
+                              int edad)
+    {
+        Empleado empleado = new Empleado();
+        empleado.setNombre(nombre);
+        empleado.setApellido(apellido);
+        empleado.setCedula(cedula);
+        empleado.setEdad(edad);
+        getListaEmpleados().add(empleado);
+        return true;
+    }
+
+    public List<Empleado> obtenerEmpleado()
+    {
+     return getListaEmpleados();
+    }
+    public void actualizarEmpleado(String cedula)
+    {
+        for (int i = 0; i < getListaEmpleados().size(); i++)
+        {
+            Empleado empleado = getListaEmpleados().get(i);
+
+            if (empleado.getCedula().equalsIgnoreCase(cedula))
+            {
+                String opcion = JOptionPane.showInputDialog(
+                        "Que dato desea actualizar?\n" +
+                                "1. Nombre\n" +
+                                "2. Apellido\n" +
+                                "3. cedula\n" +
+                                "4. edad\n" +
+                                "5. Salir\n" +
+                                "Seleccione una opcion:");
+
+                switch (opcion)
+                {
+                    case "1":
+                        String nombreNuevo = JOptionPane.showInputDialog("Ingrese el nuevo nombre:");
+                        empleado.setNombre(nombreNuevo);
+                        break;
+                    case "2":
+                        String apellidoNuevo = JOptionPane.showInputDialog("Ingrese el nuevo apellido:");
+                        empleado.setApellido(apellidoNuevo);
+                        break;
+                    case "3":
+                        String cedulaNueva = JOptionPane.showInputDialog("Ingrese la nueva cedula:");
+                        empleado.setCedula(cedulaNueva);
+                        break;
+                    case "4":
+                        int edadNueva = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la nueva cedula:"));
+                        empleado.setEdad(edadNueva);
+                        break;
+                    case "5":
+                        JOptionPane.showMessageDialog
+                                (null, "Saliendo del programa.");
+                        System.exit(0);
+                    default:
+                        JOptionPane.showMessageDialog(null, "Opción no válida");
+                        break;
+                }
+            }
+        }
+
+    }
+    public void eliminarEmpleado(String cedula)
+    {
+        int totalLista= getListaEmpleados().size();
+        for(int i =0; i<totalLista; i++)
+        {
+            Empleado empleado = getListaEmpleados().get(i);
+            if(empleado.getCedula().equalsIgnoreCase(cedula))
+            {
+                getListaEmpleados().remove(i);
+                break;
+            }
+        }
+    }
+
 
     /**
      * Metodo para crear un objeto
@@ -148,12 +267,43 @@ public class PrestamoUq
 
     /**
      * Metodo para Actualizar un Objeto
-     * @param cambio
+     * @param codigo opcion
      */
-    public void actualizarObjeto(String cambio)
+    public void actualizarObjeto(String codigo)
     {
+        for (int i = 0; i < getListaObjetos().size(); i++)
+        {
+        Objeto objeto = getListaObjetos().get(i);
 
+        if (objeto.getCodigo().equalsIgnoreCase(codigo))
+        {
+            String opcion = JOptionPane.showInputDialog(
+                    "Que dato desea actualizar?\n" +
+                            "1. Nombre\n" +
+                            "2. codigo\n" +
+                            "3. Salir\n" +
+                            "Seleccione una opcion:");
 
+            switch (opcion)
+            {
+                case "1":
+                    String nombreNuevo = JOptionPane.showInputDialog("Ingrese el nuevo nombre:");
+                    objeto.setNombre(nombreNuevo);
+                    break;
+                case "2":
+                    String cedulaNueva = JOptionPane.showInputDialog("Ingrese el nuevo codigo:");
+                    objeto.setCodigo(cedulaNueva);
+                    break;
+                case "3":
+                    JOptionPane.showMessageDialog
+                            (null, "Saliendo del programa.");
+                    System.exit(0);
+                default:
+                    JOptionPane.showMessageDialog(null, "Opción no válida");
+                    break;
+                }
+            }
+        }
 
     }
 
@@ -176,13 +326,30 @@ public class PrestamoUq
 
     }
 
+    /**
+     * Metodo para verificar si un String es un numero o no
+     * @param opcion
+     * @return
+     */
+    public static boolean verificarOpcion(String opcion)
+    {
+        try
+        {
+            Integer.parseInt(opcion);
+            return true;
+        }
+        catch (NumberFormatException e)
+        {
+            return false;
+        }
+    }
+
 
     @Override
     public String toString()
     {
-        return "PrestamosUq{" +
-                "nombre='" + nombre + '\'' +
-                '}';
+        return "PrestamosUq: " +"\n"+
+                "Nombre: " + nombre ;
     }
 
 
