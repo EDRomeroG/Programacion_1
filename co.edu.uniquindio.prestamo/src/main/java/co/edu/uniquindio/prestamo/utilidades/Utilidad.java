@@ -12,6 +12,16 @@ import java.util.List;
 public class Utilidad
 {
 
+    public static PrestamoUq inicializarPrestamo()
+    {
+        PrestamoUq prestamoUq = new PrestamoUq();
+        prestamoUq.setNombre("Prestamos Rapidos");
+
+
+        return prestamoUq;
+    }
+
+
 
     /**
      * Metodo para Iniciar la interaccion con el usuario (menu Principal)

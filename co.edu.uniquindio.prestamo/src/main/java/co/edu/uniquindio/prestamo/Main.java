@@ -14,21 +14,9 @@ public class Main
      */
     public static void main(String[] args)
     {
-        PrestamoUq prestamoUq = inicializarPrestamo();
+        PrestamoUq prestamoUq = Utilidad.inicializarPrestamo();
         Utilidad.mostarMenuPrincipal(prestamoUq);
     }
 
 
-    /**
-     * Metodo para inicializar el prestamo
-     * @return
-     */
-    private static PrestamoUq inicializarPrestamo()
-    {
-        PrestamoUq prestamoUq = new PrestamoUq();
-        prestamoUq.setNombre("Prestamos Rapidos");
-
-
-        return prestamoUq;
-    }
 }
